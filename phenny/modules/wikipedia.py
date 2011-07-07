@@ -8,7 +8,7 @@ http://inamidst.com/phenny/
 """
 
 import re, urllib
-import web
+from phenny import web
 
 wikiuri = 'http://%s.wikipedia.org/wiki/%s'
 # wikisearch = 'http://%s.wikipedia.org/wiki/Special:Search?' \

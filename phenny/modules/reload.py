@@ -8,7 +8,7 @@ http://inamidst.com/phenny/
 """
 
 import sys, os.path, time, imp
-import irc
+from phenny import irc
 
 def f_reload(phenny, input): 
    """Reloads a module, for use by admins only.""" 

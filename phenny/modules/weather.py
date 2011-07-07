@@ -8,8 +8,8 @@ http://inamidst.com/phenny/
 """
 
 import re, urllib
-import web
-from tools import deprecated
+from phenny import web
+from phenny.tools import deprecated
 
 r_from = re.compile(r'(?i)([+-]\d+):00 from')
 
@@ -52,7 +52,7 @@ def local(icao, hour, minute):
    return str(hour) + ':' + str(minute) + 'Z'
 
 def code(phenny, search): 
-   from icao import data
+   from phenny.icao import data
    
    if search.upper() in [loc[0] for loc in data]:
       return search.upper()

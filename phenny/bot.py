@@ -8,9 +8,11 @@ http://inamidst.com/phenny/
 """
 
 import sys, os, re, threading, imp
-import irc
 
-home = os.getcwd()
+import phenny
+from phenny import irc
+
+HOME = os.path.abspath(os.path.dirname(phenny.__file__))
 
 def decode(bytes): 
    try: text = bytes.decode('utf-8')
@@ -34,12 +36,12 @@ class Phenny(irc.Bot):
 
       filenames = []
       if not hasattr(self.config, 'enable'): 
-         for fn in os.listdir(os.path.join(home, 'modules')): 
+         for fn in os.listdir(os.path.join(HOME, 'modules')): 
             if fn.endswith('.py') and not fn.startswith('_'): 
-               filenames.append(os.path.join(home, 'modules', fn))
+               filenames.append(os.path.join(HOME, 'modules', fn))
       else: 
          for fn in self.config.enable: 
-            filenames.append(os.path.join(home, 'modules', fn + '.py'))
+            filenames.append(os.path.join(HOME, 'modules', fn + '.py'))
 
       if hasattr(self.config, 'extra'): 
          for fn in self.config.extra: 

@@ -9,7 +9,7 @@ http://inamidst.com/phenny/
 """
 
 import re, urllib
-import web
+from phenny import web
 
 def detect(text): 
    uri = 'http://ajax.googleapis.com/ajax/services/language/detect'

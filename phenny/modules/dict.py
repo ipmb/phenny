@@ -8,8 +8,8 @@ http://inamidst.com/phenny/
 """
 
 import re, urllib
-import web
-from tools import deprecated
+from phenny import web
+from phenny.tools import deprecated
 
 r_li = re.compile(r'(?ims)<li>.*?</li>')
 r_tag = re.compile(r'<[^>]+>')

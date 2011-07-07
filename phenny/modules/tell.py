@@ -8,7 +8,7 @@ http://inamidst.com/phenny/
 """
 
 import os, re, time, random
-import web
+from phenny import web
 
 maximum = 4
 lispchannels = frozenset([ '#lisp', '#scheme', '#opendarwin', '#macdev',
